@@ -1,0 +1,11 @@
+# Render Blueprint · sitio estático (gratis, no se "duerme")
+services:
+  - type: web
+    name: leonel-te-estaciona
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=300
